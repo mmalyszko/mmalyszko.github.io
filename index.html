@@ -1,25 +1,421 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello World</title>
-    <style>
-        body {
-            background-color: white;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        p {
-            color: #616161;
-            font-size: 14px;
-        }
-    </style>
+    <title>Maciej Małyszko - Homepage</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Maciej Małyszko - Software Developer">
+    <meta name="author" content="Maciej Małyszko">
+    <meta name="robots" content="index, follow">
+    <meta name="keywords" content="Maciej Małyszko, software development, data science, game design, contact">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="og:title" content="Maciej Małyszko - Homepage">
+    <meta property="og:description" content="Maciej Małyszko - Software Developer">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="pl_PL">
+    <meta property="og:url" content="https://mmalyszko.pro">
+    <link rel="canonical" href="https://mmalyszko.pro">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;700&display=swap" rel="stylesheet">
+    <link id="theme-style" rel="stylesheet" href="dist/style-1.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
 </head>
 <body>
-    <p>Hello World</p>
+<main class="tty">
+
+    <div id="style-switcher">
+        <button data-style="4" title="Snow White" style="background:#fff;"></button>
+        <button data-style="1" title="Space Blue" style="background:#1a71c6;"></button>
+        <button data-style="2" title="Diablo Red" style="background:#d53131;"></button>
+        <button data-style="3" title="Matrix Green" style="background:#2ccd56;"></button>
+    </div>
+
+    <section aria-label="Section 1 - Welcome message" >
+        <code class="prompt">[ <span class="host">mack@homepage</span> ~]$ <span class="in">whoami</span></code>
+        <div class="stdout">
+            <div class="stdout-hello-world">
+            <h1>Maciej Małyszko</h1>
+            <ul class="list-tab">
+                <li>Software Development</li>
+                <li>Data Science</li>
+                <li>Game Design</li>
+            </ul>
+            </div>
+        </div>
+    </section>
+
+    <section aria-label="Section 2 - Genesis story" class="hidden-start">
+        <code class="prompt">[ <span class="host">mack@homepage</span> ~]$ <span class="in">./genesis.sh</span></code>
+        <div class="stdout">
+            <div class="screen-frame stdout-bio">
+
+                <h2>A long time ago, on a Pentium MMX–era PC far, far away...</h2>
+
+                <p>From the abyss of Windows 98, the void of Notepad, and the preview mode of FrontPage Express,
+                    my first HTML page emerged — filled with background-image tables and <code>&lt;frameset&gt;</code> navigation.
+                    And it was good, although sometimes unpredictable in IE or Netscape.
+                    But overall — it was good.</p>
+
+                <p>But the World Wide Web waters were still and empty.
+                    And then came animated GIFs, mouseover effects, and popup windows.
+                    And I said: "Let there be animated GIFs on my pages as well!" And there were.</p>
+
+                <p>The first PHP scripts and global variables breathed life into static HTML code.
+                    Visit counters and guestbooks wrote data to .txt files —
+                    no sanitization, no mercy.</p>
+
+                <p>But PHP was alone. Then, by the grace of GPL, MySQL descended,
+                    and phpMyAdmin joined them together.
+                    And it worked well, though only in Firefox.</p>
+
+                <p><code>include 'header'</code> and <code>session_start()</code>
+                    gave rise to the first CMS and admin panels.
+                    And the master key that opened every door was <code>admin / admin</code>.
+                    Singleton and MVC were the only patterns known to man. And it was good.</p>
+
+                <p>The ancient DevOps revealed the truth to the world,
+                    sending files one by one over FTP —
+                    without putting the server into maintenance mode, without backup, without shame.</p>
+
+                <p>The forests of JavaScript libraries blossomed across the horizon,
+                    bearing the fruit of lightboxes, sliders, and multilevel dropdown menus,
+                    difficult to traverse with a trembling mouse cursor.</p>
+
+                <p>Webmasters, armed with Smarty templates and CRUD generators, were ready to slash impossible deadlines.
+                    Pretty URLs and tag clouds gave birth to the SEO industry.</p>
+
+                <p>Relentless mortals, forged in the fire of <code>format C:</code>
+                    and SATA drivers loaded from floppy disks,
+                    were granted passage into the underworld of Linux,
+                    through RedHat and Mandrake — bundled on CDs with computer magazines.</p>
+
+                <p>Delphi and C++ Builder unleashed the creativity of a new generation of coders,
+                    ready to ship Windows XP applications — without even knowing that WinAPI existed.</p>
+
+                <p>The Internet also came alive through the power of Flash and ActionScript.
+                    Buttons cast shadows, intros had preloaders,
+                    and designers crafted beautiful and clean forms
+                    in Photoshop, powered by the eternal trial license.</p>
+
+                <p>When the sheer number of creations overwhelmed even ISDN lines,
+                    XMLHttpRequest descended and proclaimed:
+                    “You don’t need to reload the whole page.”
+                    And everything became faster.
+                    And it was good.</p>
+
+                <p>Then came jQuery with another powerful message of salvation:
+                    “I am the way, the truth, and the only interface. Code once, and it will work in every browser.”
+                    And so it was.</p>
+
+                <p>And there were many browsers,
+                    and Safari walked the land of Windows.</p>
+
+                <p style="text-align: center">...</p>
+
+                <p>Yea, though I walk through the valley of the shadow of AI,
+                    I will fear no evil, nor usage limits — for I am the ultimate end-user,
+                    master and commander, and all technologies shall serve me.</p>
+
+                <small><em>NOT AI-generated. Written by an actual mortal. Respect the copyright || > /dev/null</em></small>
+            </div>
+        </div>
+    </section>
+
+    <section aria-label="Section 3 - About me" class="hidden-start">
+        <code class="prompt">[ <span class="host">mack@homepage</span> ~]$ <span class="in">./bio.sh</span></code>
+        <div class="stdout">
+            <div class="screen-frame stdout-core-skills">
+                <h3>About me</h3>
+            <p>
+                Among the CEOs, CTOs, and other three-letter titles, I somehow ended up as an SSD <em>(Senior Software Developer)</em>.
+                I'm not a big fan of the “senior” label, but I've been around long enough and seen enough — so there's no point fighting it.
+                “<em>Solid State Developer</em>” would sound even better — like <em>Solid Snake</em> from Metal Gear... Anyway, alongside the tech side, I also have experience in business and management.
+            </p>
+            </div>
+        </div>
+    </section>
+
+    <section aria-label="Section 4 - Tech stack" class="hidden-start">
+        <code class="prompt">[ <span class="host">mack@homepage</span> ~]$ <span class="in">ls /home/skills</span></code>
+        <div class="stdout">
+            <div class="screen-frame stdout-core-skills">
+                <h3>Daily tech-stack</h3>
+                <ul class="list-ptr list-col">
+                    <li>Python</li>
+                    <li>JavaScript</li>
+                    <li>PHP</li>
+                    <li>C++</li>
+                    <li>Docker</li>
+                    <li>Linux</li>
+                    <li>Git</li>
+                    <li>CI/CD</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section aria-label="Section 5 - Contact" class="hidden-start">
+        <code class="prompt">[ <span class="host">mack@homepage</span> ~]$ <span class="in">./contact.sh</span></code>
+        <div class="stdout">
+            <div class="screen-frame stdout-core-skills">
+                <h4>Follow me</h4>
+                <ul class="list-ptr">
+                    <li><a target="_blank" href="https://github.com/mmalyszko">github</a></li>
+                    <li><a target="_blank" href="https://x.com/MaciejMalyszko">x_twitter</a></li>
+                    <li><a target="_blank" href="https://instagram.com/final.constructor">instagram</a></li>
+                    <li><a target="_blank" href="https://gamedevnull.itch.io">itch_io</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </section>
+
+    <div class="tty-session hidden-start">
+    </div>
+
+    <footer class="hidden-start">
+        <p id="last-login">Last login: Sun, 27 Jul 2025, 23:10:09 on ttys000</p>
+        <p class="cpy"> &copy; 2025 Maciej Małyszko > [ Terminal vibes ~]$ design</p>
+    </footer>
+
+</main>
+
+<template id="tty-section-template">
+    <section class="ready">
+        <code class="prompt">[ <span class="host"></span> <span class="path">~</span>]<span class="sign">$</span> <span class="cursor"></span><input type="text" class="stdin" spellcheck="false" autocomplete="off" /></code>
+        <div class="stdout"></div>
+    </section>
+</template>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => { // vanilla JS to make it fast and light
+
+        // 1. Typing effect
+        const helloWorld = document.querySelector('.stdout-hello-world');
+        if (helloWorld) {
+            helloWorld.classList.add('typing');
+            const h1 = helloWorld.querySelector('h1');
+            const ul = helloWorld.querySelector('ul');
+            const lis = ul ? Array.from(ul.querySelectorAll('li')) : [];
+            const originalTexts = [
+                { el: h1, text: h1 ? h1.textContent : '' },
+                ...lis.map(li => ({ text: li.textContent }))
+            ];
+
+            // hide h1 and ul > li
+            if (h1) h1.textContent = '';
+            if (ul) ul.innerHTML = '';
+
+            let current = 0;
+            let charIndex = 0;
+
+            function type() {
+                if (current >= originalTexts.length) {
+                    helloWorld.classList.remove('typing');
+                    return;
+                }
+                // h1
+                if (current === 0) {
+                    const { el, text } = originalTexts[0];
+                    if (charIndex < text.length) {
+                        el.textContent += text.charAt(charIndex);
+                        charIndex++;
+                        setTimeout(type, 45);
+                    } else {
+                        current++;
+                        charIndex = 0;
+                        setTimeout(type, 350);
+                    }
+                } else {
+                    // li
+                    const { text } = originalTexts[current];
+                    if (charIndex === 0 && ul) {
+                        const li = document.createElement('li');
+                        li.textContent = '';
+                        ul.appendChild(li);
+                    }
+                    const li = ul ? ul.lastElementChild : null;
+                    if (li && charIndex < text.length) {
+                        li.textContent += text.charAt(charIndex);
+                        charIndex++;
+                        setTimeout(type, 45);
+                    } else {
+                        current++;
+                        charIndex = 0;
+                        setTimeout(type, 350);
+                    }
+                }
+            }
+            type();
+        }
+
+        // 2. Delayed sections showing
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {threshold: 0.1});
+
+        document.querySelectorAll('.hidden-start').forEach(section => {
+            observer.observe(section);
+        });
+
+    });
+
+    // 3. jQuery plugin for command line
+    (function($) {
+        $.fn.linuxTerminal = function(options) {
+            const settings = $.extend({
+                promptUser: 'user',
+                promptHost: 'host',
+                commands: {}
+            }, options);
+
+            return this.each(function() {
+                const $terminal = $(this);
+                const $template = $('#tty-section-template');
+                let commandHistory = [];
+                let historyIndex = -1;
+
+                function addNewSection(focus = true) {
+                    if ($terminal.find('section.ready').length > 0) return;
+
+                    const $newSection = $template.contents().clone();
+                    $newSection.find('.host').text(`${settings.promptUser}@${settings.promptHost}`);
+                    $terminal.append($newSection);
+
+                    if (focus) {
+                        $newSection.find('.stdin').focus();
+                    }
+                }
+
+                $terminal.on('keydown', 'section.ready .stdin', function(e) {
+
+                    // history
+                    if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+                        e.preventDefault();
+                        const $input = $(this);
+                        if (e.key === 'ArrowUp' && historyIndex < commandHistory.length - 1) {
+                            historyIndex++;
+                            $input.val(commandHistory[historyIndex]);
+                        } else if (e.key === 'ArrowDown') {
+                            if (historyIndex > 0) {
+                                historyIndex--;
+                                $input.val(commandHistory[historyIndex]);
+                            } else {
+                                historyIndex = -1;
+                                $input.val('');
+                            }
+                        }
+                        return;
+                    }
+
+                    // commands
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        const $input = $(this);
+                        const currentSection = $input.closest('section');
+                        const commandText = $input.val().trim();
+                        // TODO sanitize input
+                        if (!commandText) return;
+                        commandHistory.unshift(commandText);
+                        historyIndex = -1;
+
+                        $input.prev('.cursor').remove();
+                        $input.replaceWith($('<span class="in"></span>').text(commandText));
+                        currentSection.removeClass('ready');
+
+                        const [commandName, ...args] = commandText.split(/\s+/);
+                        const commandHandler = settings.commands[commandName];
+                        const $stdout = currentSection.find('.stdout');
+
+                        if (commandHandler) {
+                            const output = commandHandler(args, { $stdout }, settings.commands);
+                            if (typeof output === 'string') {
+                                $stdout.html(output);
+                                currentSection.addClass('done')
+                            }
+                            else if (typeof output === 'object' && output.action === 'clear') {
+                                $terminal.find('section').remove();
+                            }
+                        } else {
+                            $stdout.text(`'${commandName}' command not found. Type help to see available commands.`);
+                        }
+                        addNewSection();
+                    }
+                });
+
+                // click on the blinking cursor -> focus the cmd input
+                $terminal.on('click', 'section.ready .cursor', function() {
+                    $(this).siblings('.stdin').focus();
+                });
+
+                // add first interactive command line section
+                addNewSection(false);
+            });
+        };
+    })(jQuery);
+
+    $(function() {
+        const myCommands = {
+            'cat': () => `<div class="screen-frame"><pre>
+                            _
+                           | \\
+                           | |
+                           | |
+      |\\                   | |
+     /, ~\\                / /
+    X     \`-.....-------./ /
+     ~-. ~  ~              |
+        \\             /    |
+         \\  /_     ___\\   /
+         | /\\ ~~~~~   \\ |
+         | | \\        || |
+         | |\\ \\       || )
+        (_/ (_/      ((_/</pre></div>`,
+            'date': () => '<div class="screen-frame">' + new Date().toLocaleString() + '</div>',
+            'help': (args, elements, allCommands) => `<div class="screen-frame">Available commands: ${Object.keys(allCommands).join(', ')}</div>`,
+            'clear': () => ({ action: 'clear' }),
+            'quote': () => {
+                const fortunes = [
+                    "\"Whether you think you can, or you think you can’t, you’re right.\" — Henry Ford",
+                    "\"Life's tragedy is that we get old too soon and wise too late.\" — Benjamin Franklin",
+                    "\"Everyone has a plan ’til they get punched in the face.\" — Mike Tyson",
+                    "\"Don’t wish it was easier. Wish you were better.\" — Jim Rohn",
+                    "\"If you're going through hell, keep going.\" — Winston Churchill",
+                    "\"Absorb what is useful, discard what is not, add what is uniquely your own.\" — Bruce Lee",
+                ];
+                const pick = fortunes[Math.floor(Math.random() * fortunes.length)];
+                return `<div class="screen-frame">${pick}</div>`;
+            }
+        };
+
+        $('.tty-session').linuxTerminal({
+            promptUser: 'mack',
+            promptHost: 'homepage',
+            commands: myCommands
+        });
+    });
+
+    // 4. Theme switcher
+    document.addEventListener('DOMContentLoaded', () => {
+        const switcher = document.getElementById('style-switcher');
+        const themeLink = document.getElementById('theme-style');
+        if (switcher && themeLink) {
+            switcher.addEventListener('click', (e) => {
+                if (e.target.tagName === 'BUTTON') {
+                    const styleNum = e.target.getAttribute('data-style');
+                    themeLink.setAttribute('href', `dist/style-${styleNum}.css`);
+                }
+            });
+        }
+    });
+</script>
+
 </body>
 </html>

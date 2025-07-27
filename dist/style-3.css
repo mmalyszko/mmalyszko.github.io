@@ -1,0 +1,443 @@
+@keyframes blink-cursor {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0;
+  }
+}
+.hidden-start {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #0d0d0d;
+  font-family: "Fira Code", "GeistMono-Regular", Consolas, monaco, monospace;
+  color: #00ff41;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: #00ffae;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+ul, ol {
+  list-style: none;
+  padding-left: 0;
+  line-height: 1.8;
+}
+
+p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+
+.tty {
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+}
+
+#style-switcher {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+#style-switcher button {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #1a1f1a;
+  cursor: pointer;
+}
+.prompt {
+  color: #d1ffd1;
+  margin-bottom: 0.5rem;
+  font-size: 1.125rem;
+  display: flex;
+  flex-wrap: nowrap;
+}
+.prompt .in {
+  color: #00ff41;
+  padding: 0 0.5rem;
+}
+.prompt .host {
+  color: #00ffae;
+  padding: 0 0.5rem;
+}
+.prompt .stdin {
+  background-color: inherit;
+  width: 80%;
+  border: none;
+  font: inherit;
+  flex-grow: 1;
+  padding: 0 0.5rem;
+  cursor: pointer;
+  color: #1a1f1a;
+  transition: background 0.15s;
+}
+.prompt .stdin:focus {
+  outline: none;
+  cursor: text;
+  color: #00ff41;
+}
+.prompt .cursor {
+  display: inline-block;
+  width: 0.6em;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  background: #d1ffd1;
+  opacity: 0.8;
+  margin: 0 0 0 0.5rem;
+  vertical-align: bottom;
+  animation: blink-cursor 1s steps(1) infinite;
+  transition: opacity 0.2s;
+  cursor: pointer;
+  content: "";
+}
+
+section.ready:has(.stdin:focus) .cursor {
+  display: none;
+}
+
+.stdout {
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.stdout small {
+  color: #00ff41;
+}
+
+.stdout-hello-world h1 {
+  font-size: 1.85rem;
+}
+
+.stdout-hello-world ul {
+  font-size: 1.125rem;
+}
+
+.stdout-bio h2 {
+  color: #00ff41;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+.stdout-core-skills h3,
+.stdout-core-skills h4 {
+  color: #00ff41;
+  font-weight: 400;
+  position: relative;
+  padding-left: 2rem;
+}
+.stdout-core-skills h3::before,
+.stdout-core-skills h4::before {
+  content: "//";
+  position: absolute;
+  left: 0;
+  color: #00ff41;
+}
+
+.screen-frame {
+  border: 1px solid #00ff41;
+  padding: 1rem 1.4rem;
+  margin-top: 1rem;
+}
+
+.list-ptr {
+  margin-bottom: 0.5rem;
+}
+
+.list-ptr li::before {
+  content: "->";
+  margin-right: 0.5rem;
+  color: #bfff00;
+}
+
+.list-tab {
+  color: #00ff41;
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.list-tab li {
+  position: relative;
+  padding-right: 1.2em;
+}
+.list-tab li::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  color: #00ff41;
+}
+.list-tab li:last-child::after {
+  content: "";
+}
+.list-tab li::before {
+  content: "";
+  margin: 0;
+}
+
+.list-col {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 0;
+  padding: 0;
+  margin: 0 0 0.4rem 0;
+}
+.list-col li {
+  flex: 1 1 25%;
+  min-width: 150px;
+  max-width: 25%;
+  break-inside: avoid;
+}
+
+footer {
+  text-align: center;
+  color: #00ff41;
+  margin-bottom: 1.5rem;
+  margin-top: 4rem;
+}
+footer p {
+  margin-bottom: 0.2rem;
+  font-size: 1rem;
+}
+footer p.cpy {
+  font-size: 0.875rem;
+}
+
+/* ============================================================
+   Large screens (lg) - 3 cols
+   ============================================================ */
+@media (max-width: 992px) {
+  .list-cols li {
+    flex: 1 1 33.3333%;
+    max-width: 33.3333%;
+    min-width: 150px;
+  }
+}
+/* ============================================================
+   Medium screens (md) - 2 cols
+   ============================================================ */
+@media (max-width: 768px) {
+  .tty {
+    padding: 0.5rem;
+    max-width: 600px;
+  }
+  .stdout {
+    margin-bottom: 1rem;
+    line-height: 1.4;
+  }
+  .stdout-bio h2 {
+    font-size: 1.2rem;
+  }
+  .prompt {
+    font-size: 1.125rem;
+  }
+  .list-cols li {
+    flex: 1 1 50%;
+    max-width: 50%;
+    min-width: 120px;
+  }
+}
+/* ============================================================
+   Medium screens (md) - 2 cols / landscape orientation
+   ============================================================ */
+@media (max-width: 768px) and (orientation: landscape) {
+  .tty {
+    max-width: 100%;
+    padding-top: 0.8rem;
+  }
+  #style-switcher {
+    top: 1rem;
+    right: 0.5rem;
+  }
+}
+/* ============================================================
+   Small screens (sm) - 1 cols
+   ============================================================ */
+@media (max-width: 576px) {
+  .tty {
+    max-width: 100%;
+    padding-top: 0.8rem;
+  }
+  #style-switcher {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+  #style-switcher button {
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  .stdout {
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+  .prompt {
+    font-size: 1rem;
+  }
+  .list-cols {
+    flex-direction: column;
+    gap: 0;
+  }
+  .list-cols li {
+    max-width: 100%;
+    min-width: 0;
+  }
+  .stdout-core-skills .list-cols {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem 0;
+  }
+  .stdout-core-skills .list-cols li {
+    flex: 1 1 50%;
+    max-width: 50%;
+    min-width: 0;
+  }
+  .list-tab {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    padding-right: 1rem;
+  }
+  .list-tab li {
+    padding-right: 0;
+  }
+  .list-tab li::after {
+    content: "";
+  }
+  .list-tab li::before {
+    content: "#";
+    margin-right: 0.5rem;
+    color: #bfff00;
+  }
+  .stdout-hello-world h1 {
+    font-size: 1.65rem;
+    margin-top: 0.65rem;
+  }
+  .stdout-hello-world ul {
+    font-size: 1rem;
+  }
+  .stdout-bio h2 {
+    font-size: 1.1rem;
+    line-height: 1.8rem;
+  }
+  .stdout-bio p {
+    font-size: 1rem;
+  }
+  .screen-frame {
+    padding: 1rem;
+  }
+  footer p {
+    font-size: 0.75rem;
+    margin-bottom: 0.3rem;
+  }
+  footer p.cpy {
+    font-size: 0.7rem;
+  }
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+[class*=col-] {
+  padding: 5px;
+}
+
+.col-1 {
+  flex: 0 0 8.3333%;
+  max-width: 8.3333%;
+}
+
+.col-2 {
+  flex: 0 0 16.6667%;
+  max-width: 16.6667%;
+}
+
+.col-3 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+
+.col-4 {
+  flex: 0 0 33.3333%;
+  max-width: 33.3333%;
+}
+
+.col-5 {
+  flex: 0 0 41.6667%;
+  max-width: 41.6667%;
+}
+
+.col-6 {
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+.col-7 {
+  flex: 0 0 58.3333%;
+  max-width: 58.3333%;
+}
+
+.col-8 {
+  flex: 0 0 66.6667%;
+  max-width: 66.6667%;
+}
+
+.col-9 {
+  flex: 0 0 75%;
+  max-width: 75%;
+}
+
+.col-10 {
+  flex: 0 0 83.3333%;
+  max-width: 83.3333%;
+}
+
+.col-11 {
+  flex: 0 0 91.6667%;
+  max-width: 91.6667%;
+}
+
+.col-12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+@media (max-width: 576px) {
+  [class*=col-] {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
